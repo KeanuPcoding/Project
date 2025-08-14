@@ -1,0 +1,119 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Page!</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="container">
+    <!-- Navigation -->
+    <header class="site-header">
+      <nav class="nav-bar">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="#home">
+              <img src="Logo.png" alt="Logo" />
+            </a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="Index.html" class="active">Index</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Project.html">Projects</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Welcome / Home Section -->
+    <section id="home" class="welcome">
+      <h1>Welcome to My Page!</h1>
+      <p>Your one-stop digital experience — projects, insights, and connection.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bottom-section">
+      <h2>About Me</h2>
+      <p>I'm a solo digital creator based in South Africa, building unique web experiences and cool online projects.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="middle-section">
+      <div>
+        <h3>Website A</h3>
+        <p>This is a great resource for learning web development.</p>
+        <a href="https://www.websiteA.com" target="_blank" rel="noopener" class="btn-link">Visit Website A</a>
+      </div>
+      <div>
+        <h3>Website B</h3>
+        <p>A creative portfolio showcasing amazing design work.</p>
+        <a href="https://www.websiteB.com" target="_blank" rel="noopener" class="btn-link">Visit Website B</a>
+      </div>
+      <div>
+        <h3>Website C</h3>
+        <p>Daily tech news and insightful articles.</p>
+        <a href="https://www.websiteC.com" target="_blank" rel="noopener" class="btn-link">Visit Website C</a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bottom-section">
+      <h2>Contact Me</h2>
+      <p>Follow me on socials, subscribe to the newsletter, or send a message below.</p>
+
+      <!-- Newsletter Form -->
+      <div class="footer-newsletter">
+        <form>
+          <label for="email" class="visually-hidden">Email address</label>
+          <input id="email" type="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="footer-social">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/kptheboogeyman" target="_blank" aria-label="Instagram">
+            <img src="icons/instagram.png" alt="Instagram" />
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=100090941276871" target="_blank" aria-label="Facebook">
+            <img src="icons/facebook.png" alt="Facebook" />
+          </a>
+          <a href="https://github.com/copilot" target="_blank" aria-label="GitHub">
+            <img src="icons/github.png" alt="GitHub" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-bottom">
+        <p>&copy; 2025 YourSiteName. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Highlight active nav link depending on current URL or hash
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const currentPath = window.location.pathname.toLowerCase();
+    const currentHash = window.location.hash.toLowerCase();
+
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href').toLowerCase();
+      
+      if ((href === currentHash && currentHash !== '') || (href === currentPath.split('/').pop() && currentHash === '')) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

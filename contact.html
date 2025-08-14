@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Contact page specific styling */
+    .contact-section {
+      max-width: 600px;
+      margin: 3rem auto 5rem;
+      background-color: #1a1a1a;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+      color: #ccc;
+    }
+
+    .contact-section h2 {
+      color: #fff;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    label {
+      font-weight: 600;
+      color: #bbb;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: vertical;
+      background-color: #333;
+      color: #eee;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      background-color: #444;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    button[type="submit"] {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #005fa3;
+    }
+
+    /* Social Icons Section */
+    .footer-social {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .footer-social h3 {
+      color: #fff;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icons a img {
+      width: 36px;
+      height: 36px;
+      filter: brightness(0) invert(1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .social-icons a:hover img {
+      transform: scale(1.2);
+      filter: drop-shadow(0 0 8px #0077cc);
+    }
+
+    /* Newsletter Form */
+    .footer-newsletter {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .footer-newsletter input[type="email"] {
+      padding: 10px;
+      width: 70%;
+      max-width: 350px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      font-size: 1rem;
+    }
+
+    .footer-newsletter button {
+      padding: 10px 18px;
+      border: none;
+      background-color: #ff6a00;
+      color: white;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+
+    .footer-newsletter button:hover {
+      background-color: #e95c00;
+    }
+
+    @media (max-width: 600px) {
+      .footer-newsletter input[type="email"] {
+        width: 100%;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+
+      .footer-newsletter button {
+        width: 100%;
+        border-radius: 4px;
+      }
+
+      .social-icons {
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="container">
+    <!-- Navigation -->
+    <header class="site-header">
+      <nav class="nav-bar">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="index.html">
+              <img src="Logo.png" alt="Logo" />
+            </a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Your full name" required />
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Your email address" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <!-- Newsletter Signup -->
+      <div class="footer-newsletter">
+        <form>
+          <input type="email" placeholder="Subscribe to our newsletter" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Social Media Icons -->
+      <div class="footer-social">
+        <h3>Connect with me</h3>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/kptheboogeyman" target="_blank" aria-label="Instagram">
+            <img src="icons/instagram.png" alt="Instagram" />
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=100090941276871" target="_blank" aria-label="Facebook">
+            <img src="icons/facebook.png" alt="Facebook" />
+          </a>
+          <a href="https://github.com/copilot" target="_blank" aria-label="GitHub">
+            <img src="icons/github.png" alt="GitHub" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-bottom">
+        <p>&copy; 2025 YourSiteName. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const currentPath = window.location.pathname.toLowerCase();
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    navLinks.forEach(link => {
+      if (link.getAttribute('href').toLowerCase() === currentPath.split('/').pop()) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+      } else {
+        link.classList.remove('active');
+        link.removeAttribute('aria-current');
+      }
+    });
+  </script>
+</body>
+</html>
